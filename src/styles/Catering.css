@@ -1,0 +1,364 @@
+.catering-section {
+  background: var(--cream);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.catering-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.catering-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.catering-header .section-heading {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.catering-header .section-heading span {
+  color: var(--sage-dark);
+  font-style: italic;
+}
+
+.catering-header .section-subtitle {
+  max-width: 530px;
+  text-align: left;
+  margin: 0;
+}
+
+.catering-view-all {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--sage-dark);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  padding-bottom: 8px;
+}
+
+/* Filter bar */
+
+.catering-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  padding: 18px 22px;
+  margin-bottom: 28px;
+}
+
+.catering-filter-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-dark);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.catering-filter-title svg {
+  color: var(--gold);
+}
+
+.catering-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.catering-filter-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 13px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 10px;
+  transition: 0.3s ease;
+}
+
+.catering-filter-buttons button.active,
+.catering-filter-buttons button:hover {
+  background: var(--sage-dark);
+  border-color: var(--sage-dark);
+  color: white;
+}
+
+/* Cards */
+
+.catering-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.catering-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+.catering-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow);
+}
+
+.catering-image-wrapper {
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+}
+
+.catering-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.catering-card:hover .catering-image-wrapper img {
+  transform: scale(1.07);
+}
+
+.catering-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--cream);
+  color: var(--sage-dark);
+  padding: 8px 11px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.catering-rating {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 10px;
+  background: white;
+  color: #bd9145;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.catering-rating span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Content */
+
+.catering-card-content {
+  padding: 22px;
+}
+
+.catering-cuisine {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.catering-card-content h3 {
+  font-family: var(--heading-font);
+  font-size: 22px;
+  color: var(--text-dark);
+  margin: 9px 0;
+}
+
+.catering-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.catering-location svg {
+  color: var(--sage);
+}
+
+.catering-food-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 19px 0;
+}
+
+.veg-label,
+.nonveg-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.veg-label {
+  color: #4d8051;
+  background: #edf5eb;
+}
+
+.nonveg-label {
+  color: #ad6464;
+  background: #fbefed;
+}
+
+.catering-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 17px;
+}
+
+.catering-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.catering-price span {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.catering-price strong {
+  color: var(--sage-dark);
+  font-family: var(--heading-font);
+  font-size: 21px;
+}
+
+.catering-card-footer button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 13px;
+  background: var(--sage-light);
+  color: var(--sage-dark);
+  font-size: 10px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.catering-card-footer button:hover {
+  background: var(--sage-dark);
+  color: white;
+}
+
+/* Provider banner */
+
+.catering-provider-banner {
+  margin-top: 55px;
+  padding: 35px 40px;
+  background: #eee9dc;
+  border: 1px solid #e5ddca;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.catering-provider-banner span {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.catering-provider-banner h3 {
+  font-family: var(--heading-font);
+  font-size: 25px;
+  color: var(--text-dark);
+  margin: 8px 0;
+}
+
+.catering-provider-banner p {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.catering-provider-banner button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 15px 20px;
+  background: var(--sage-dark);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+.catering-provider-banner button:hover {
+  background: var(--sage-deep);
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .catering-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .catering-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .catering-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catering-header .section-heading {
+    font-size: 30px;
+  }
+
+  .catering-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catering-filter-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .catering-provider-banner {
+    padding: 28px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catering-provider-banner button {
+    width: 100%;
+  }
+}

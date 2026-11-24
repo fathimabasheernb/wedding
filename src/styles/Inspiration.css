@@ -1,0 +1,356 @@
+.inspiration-section {
+  background: var(--cream);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.inspiration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.inspiration-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.inspiration-header .section-heading {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.inspiration-header .section-heading span {
+  color: var(--sage-dark);
+  font-style: italic;
+}
+
+.inspiration-header .section-subtitle {
+  max-width: 530px;
+  text-align: left;
+  margin: 0;
+}
+
+.inspiration-count {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: right;
+  padding-bottom: 8px;
+}
+
+.inspiration-count strong {
+  font-family: var(--heading-font);
+  color: var(--sage-dark);
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.inspiration-count span {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* Filters */
+
+.inspiration-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.inspiration-filters button {
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  background: var(--ivory);
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.inspiration-filters button.active,
+.inspiration-filters button:hover {
+  background: var(--sage-dark);
+  color: white;
+  border-color: var(--sage-dark);
+}
+
+/* Gallery */
+
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.inspiration-card {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+.inspiration-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.inspiration-image-wrapper {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inspiration-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.inspiration-card:hover .inspiration-image-wrapper img {
+  transform: scale(1.07);
+}
+
+.inspiration-category {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 11px;
+  background: var(--cream);
+  color: var(--sage-dark);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.inspiration-save {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: var(--sage-dark);
+  transition: 0.3s ease;
+}
+
+.inspiration-save:hover,
+.inspiration-save.saved {
+  color: #c65b65;
+  background: #fff0ef;
+}
+
+.inspiration-view {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  background: rgba(255, 253, 248, 0.95);
+  color: var(--sage-dark);
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.3s ease;
+}
+
+.inspiration-card:hover .inspiration-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inspiration-card-content {
+  padding: 20px;
+}
+
+.inspiration-card-content h3 {
+  font-family: var(--heading-font);
+  color: var(--text-dark);
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.inspiration-card-content p {
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* Bottom */
+
+.inspiration-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding-top: 22px;
+}
+
+.inspiration-bottom > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--sage-dark);
+  font-size: 11px;
+}
+
+.inspiration-bottom > div svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.inspiration-bottom-decoration {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* Modal */
+
+.inspiration-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(25, 35, 27, 0.75);
+}
+
+.inspiration-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--ivory);
+  position: relative;
+  animation: customModalOpen 0.25s ease;
+}
+
+.inspiration-modal > img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.inspiration-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: var(--sage-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.inspiration-modal-content {
+  padding: 28px;
+}
+
+.inspiration-modal-content > span {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.inspiration-modal-content h2 {
+  font-family: var(--heading-font);
+  color: var(--text-dark);
+  font-size: 29px;
+  margin: 10px 0;
+}
+
+.inspiration-modal-content p {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.inspiration-modal-content button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 13px 18px;
+  background: var(--sage-dark);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .inspiration-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .inspiration-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .inspiration-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inspiration-header .section-heading {
+    font-size: 30px;
+  }
+
+  .inspiration-count {
+    text-align: left;
+  }
+
+  .inspiration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inspiration-image-wrapper {
+    height: 250px;
+  }
+
+  .inspiration-view {
+    opacity: 1;
+    transform: none;
+  }
+
+  .inspiration-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inspiration-modal > img {
+    height: 240px;
+  }
+}
